@@ -1,0 +1,6 @@
+*,
+body,
+h1,
+header {
+    color: var(--dark);
+}
