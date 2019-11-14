@@ -72,16 +72,16 @@ AddOutputFilterByType DEFLATE application/x-javascript
   ExpiresActive On
 
   # Images
-  ExpiresByType image/jpeg "access plus 1 minute"
-  ExpiresByType image/gif "access plus 1 minute"
-  ExpiresByType image/png "access plus 1 minute"
-  ExpiresByType image/webp "access plus 1 minute"
-  ExpiresByType image/svg+xml "access plus 1 minute"
-  ExpiresByType image/x-icon "access plus 1 minute"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
 
   # Video
-  ExpiresByType video/mp4 "access plus 1 minute"
-  ExpiresByType video/mpeg "access plus 1 minute"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/mpeg "access plus 1 year"
 
   # CSS, JavaScript
   ExpiresByType text/css "access plus 1 month"
