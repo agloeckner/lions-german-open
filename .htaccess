@@ -43,6 +43,18 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*) index.php [L]
 
+FileETag MTime Size
+# AddOutputFilterByType is now deprecated by Apache. Use mod_filter in the future.
+AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript
+# Enable expiration control
+ExpiresActive On
+# Default expiration: 1 hour after request
+ExpiresDefault "now plus 1 hour"
+# CSS and JS expiration: 1 week after request
+ExpiresByType text/css "now plus 1 week"
+ExpiresByType application/javascript "now plus 1 week"
+ExpiresByType application/x-javascript "now plus 1 week"
+
 </IfModule>
 
 # compress text file responses
@@ -60,16 +72,16 @@ AddOutputFilterByType DEFLATE application/x-javascript
   ExpiresActive On
 
   # Images
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 minute"
+  ExpiresByType image/gif "access plus 1 minute"
+  ExpiresByType image/png "access plus 1 minute"
+  ExpiresByType image/webp "access plus 1 minute"
+  ExpiresByType image/svg+xml "access plus 1 minute"
+  ExpiresByType image/x-icon "access plus 1 minute"
 
   # Video
-  ExpiresByType video/mp4 "access plus 1 year"
-  ExpiresByType video/mpeg "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 minute"
+  ExpiresByType video/mpeg "access plus 1 minute"
 
   # CSS, JavaScript
   ExpiresByType text/css "access plus 1 month"
