@@ -8,7 +8,7 @@
 
 ?>
 
-<footer>
+<footer <?php if($page->uri() !== "home"){ echo 'class="regular"';}; ?>>
 
     <div class="content">
 
@@ -38,6 +38,14 @@
             </section>
 
 </footer>
+
+<div class="oldbrowser">
+	Website does not support old browser.<br>
+	Download:<br>
+	<a style="display: block; width: auto; text-decoration: underline;" href="https://www.google.com/chrome/">Google Chrome</a>
+	<a style="display: block; width: auto; text-decoration: underline;" href="https://www.mozilla.org">Mozilla Firefox</a>
+
+</div>
 
 </body>
 

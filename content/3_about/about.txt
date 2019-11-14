@@ -1,12 +1,19 @@
-Title: Über Lions
+Title: Zuwendung in Aktion
 
 ----
 
 Text:
 
-Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+Wenn sich fürsorgliche Menschen zusammenschließen, die Ärmel hochkrempeln und Maßnahmen ergreifen, um ihre Gemeinschaft besser zu machen, ist das eine wunderbare Sache – und ein unglaubliches Gefühl für alle Beteiligten. Das sind Lions. Lions-Mitglied zu sein bedeutet, mit gutem Beispiel voranzugehen, Beziehungen aufzubauen und die Welt durch Hilfeleistungen zu verbessern. 1,4 Millionen engagierte Männer und Frauen leisten gemeinsam Hilfe, damit sie eine nachhaltige Wirkung erzielen und mehr Leben verbessern können.
 
-The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.
+### Wann immer du Hilfe brauchst - ein Lion ist zur Stelle!
+
+- Über 100 Jahre im Dienst der Menschheit
+- 1,4 Millionen Lionsmitglieder weltweit
+- 47.000 Lions Clubs
+- 200 Länder und geografische Gebiete
+
+http://lionsinternational.org
 
 ----
 
@@ -29,10 +36,10 @@ Phone: +49 1234 5678
 
 Social:
 
--
+- 
   platform: Twitter
   url: https://twitter.com/getkirby
--
+- 
   platform: Instagram
   url: https://instagram.com/getkirby
 

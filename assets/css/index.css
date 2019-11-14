@@ -1,7 +1,72 @@
-ul.albums {
+.swiper-slide-img-1 {
+    z-index: 20;
+}
+
+.swiper-slide-img-2 {
+    z-index: 18;
+}
+
+.tile > * {
+	/* background: red; */
+}
+
+.gallery-partner {
+	display: flex;
+	flex-direction: row !important;
+	flex-wrap: wrap !important;
+	align-items: center !important;
+	justify-content: space-evenly !important;
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+
+.gallery-partner a {
+	padding: 1rem;
+	position: relative;
+	width: 200px;
+	height: 250px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+}
+
+.gallery-partner img {
+	width: 100%;
+	height: auto;
+}
+
+.gallery-partner figurecap {
+	bottom: 0;
+	position: absolute;
+	margin: .5rem 0;
+	text-align: center;
+}
+
+footer.regular {
+	height: 100px;
+}
+
+.album-container {
+	width: 100% !important;
+}
+
+.album h2 {
+	padding-bottom: 1rem;
+}
+
+
+iframe {
+	width: calc(560px * 1.5) !important;
+    height: calc(315px * 1.5)  !important;
+    margin: 1rem 0 !important;
+}
+
+ul.albums {
+	display: flex;
+	justify-content: space-around;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .test1 {
@@ -9,17 +74,22 @@ ul.albums {
 	width: auto;
 }
 
-main.album {
-    color: var(--dark) !important;
-}
-
 .album .swiper-container {
-    height: 400px;
+    /* width: 1100px; */
+    height: 700px;
 }
 
 .album .swiper-slide {
-    height: 800px !important;
+    background: #111;
 }
+
+.album .swiper-slide {
+    /* height: 100% !important; */
+}
+
+.album img {
+}
+
 
 .img-blur {
     filter: blur(5px);
@@ -34,20 +104,40 @@ main.album {
     width: 100%;
     left: 0;
     margin: 0;
-    padding: 2rem;
+    padding: 1rem 0;
     box-sizing: border-box;
+    max-width: unset;
 }
+
+/* FONT SIZES */
+
+/*
+:root {
+	--font-size-tiny: 0.8rem;
+	--font-size-small: 1.0rem;
+	--font-size-medium: 1.2rem;
+	--font-size-large: 1.4rem;
+	--font-size-huge: 2.0rem;
+	--font-size-monster: 4.0rem;
+}
+*/
+
+/* FONT */
 
 a {
     font-family: inherit;
     font-size: inherit;
+	text-decoration: none;
+}
+
+p a {
+	text-decoration: underline;
 }
 
 body,
 * {
     font-family: 'montserratlight', sans-serif;
     font-size: 16px;
-    text-decoration: none;
 }
 
 h1 {
@@ -59,7 +149,7 @@ h1 {
 
 h2 {
     font-family: 'montserratextrabold', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     line-height: 1.2;
     text-transform: uppercase;
     margin: 0;
@@ -72,9 +162,14 @@ h3 {
 }
 
 p {
-    line-height: 1.8;
+    line-height: 1.6;
     margin: 0;
 }
+
+article p {
+    line-height: 2.2;
+}
+
 
 button {
     font-family: 'montserratmedium', sans-serif;
@@ -116,7 +211,7 @@ span {
 /* COLOR */
 
 :root {
-    --light: #f5f5f5;
+    --light: #fff;
     --pri: #ebb700;
     --sec: #093088;
     --dark: #08111b;
@@ -133,8 +228,12 @@ button {
 /* PRI */
 
 .tile1 button,
-.tile3 button {
-    color: var(--pri);
+.tile3 button,
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination,
+footer {
+    color: var(--pri) !important;
 }
 
 .tile2,
@@ -201,6 +300,15 @@ footer,
     box-shadow: var(--shadow-hover);
 }
 
+
+/* TRANS */
+
+.close,
+.swiper-pagination {
+    background: var(--trans);
+}
+
+
 /* COLOR HELPER */
 
 .pri {
@@ -232,14 +340,14 @@ body {
 body,
 a {
     display: block;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 a {
-    display: flex;
+    display: inline;
     align-items: center;
     flex-direction: column;
-    color: inherit;
+    color: inherit;width: auto;
 }
 
 a.tile {
@@ -292,7 +400,6 @@ img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    object-position: center top;
     padding: 0;
     position: relative;
 }
@@ -331,6 +438,7 @@ li i {
     padding: 1rem 1rem 2rem;
     margin: 0 5rem;
     width: auto;
+    max-width: 1200px;
     box-sizing: border-box;
     z-index: 10;
     overflow: hidden;
@@ -338,6 +446,11 @@ li i {
 
 .content {
     align-items: stretch;
+}
+
+article h2,
+.album h2 {
+    margin: 5rem 0 0;
 }
 
 .item {
@@ -348,10 +461,17 @@ main {
     min-height: calc(100% - 40px); 
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+main.article,
+main.album {
+    min-height: calc(100% - 100px);
 }
 
 .grid {
-    display: grid;
+    display: block;
     grid-template-columns: 60% 10% 30%;
     grid-template-rows: 38% 38% 24%;
     min-height: 768px;
@@ -360,19 +480,21 @@ main {
     grid-gap: 1px;
 }
 
-
 .tile {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0 1rem;
-    overflow: hidden;
-    text-align: center;box-sizing: border-box;height: auto;
+    display: block;
+    top: 0;
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: 20%;
 }
 
-.tile>* {
-    margin: 0;
+.tile:nth-child(1n+4) {
+    padding: 0rem 2rem;
+}
+
+.tile > * {
+    margin: 2rem 5rem;
 }
 
 footer .content>* {
@@ -414,8 +536,9 @@ button {
     cursor: pointer;
     position: relative;
     display: block;
-    line-height: 2.2;
+    /* line-height: 2.2; */
     z-index: 25;
+    padding: 0 1rem;
 }
 
 button span {
@@ -429,7 +552,7 @@ a.close {
 	top: 0;
     right: 0;
     cursor: pointer;
-    z-index: 25;
+    z-index: 90;
 }
 
 nav {
@@ -550,9 +673,8 @@ footer a {
 }
 
 .tile img {
-    width: 60px;
-    margin: 0.25rem 2rem;
-    ;
+    width: 55px;
+    margin: 0.2rem 2rem;
 }
 
 .tile section {
@@ -569,15 +691,16 @@ footer a {
     overflow: hidden;
     list-style: none;
     padding: 0;
-    z-index: 100 !important;
-    width: 100%;
-    height: 100%;
+    z-index: 80 !important;
+    width: 70%;
+    height: auto;
     display: flex;
+    margin: 0 !important;
 }
 
 .content>* {
     box-sizing: border-box;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -587,7 +710,7 @@ footer a {
 
 .swiper-wrapper {
     height: 100%;
-    position: absolute !important;
+    position: relative;
     z-index: 1;
 }
 
@@ -605,6 +728,8 @@ footer a {
     height: 100%;
     object-fit: cover;
     right: 0;
+    top: 0;
+    position: absolute;
 }
 
 .swiper-button-next,
@@ -645,6 +770,102 @@ footer a {
     background-image: none !important;
 }
 
+.swiper-pagination {
+	width: auto !important;
+	padding: 0.5rem;
+    margin: 1rem;
+	right: 0;
+	left: unset !important;
+	top: 0;
+	bottom: unset !important;
+	font-size: 1.4rem;
+}
+
+.tile2 {
+	top: 0 !important;
+}
+
+.tile3 {
+	top: 20% !important;
+}
+
+.tile4 {
+	top: 40% !important;
+}
+
+.tile5 {
+	top: 60% !important;
+}
+
+.grid p,
+.grid a button,
+.grid section {
+	display: none;
+}
+
+.oldbrowser {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 99;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	line-height: 1.6;
+}
+
+
+@supports( grid-area: auto ) {
+
+.oldbrowser {
+	display: none;
+}
+
+.grid {
+	display: grid;
+}
+
+.grid p,
+.grid a button,
+.grid section {
+	display: unset;
+}
+
+.grid section {
+	display: flex;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+    width: auto;
+    right: auto;
+    top: auto !important;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin: unset;
+}
+
+}
+
 @media only screen and (orientation: landscape) {
     img.desktop {
         display: block !important;
@@ -654,9 +875,15 @@ footer a {
     }
 }
 
-@media screen and (max-width: 4000px) {}
+@media screen and (max-width: 2000px) {
 
-@media screen and (max-width: 1100px) {
+    .tile > * {
+        margin: 0.5rem 0;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
     
     body,
     * {
@@ -669,16 +896,25 @@ footer a {
         height: 35px;
         ;
     }
+
+    .tile img {
+        margin: 0.1rem 1rem;
+    }
+
+    .tile > * {
+        margin: 0 0 1rem;
+    }
+
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
 
     .content {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         text-align: left;
-        padding: 0 1rem;
+        padding: 0 0rem;
         margin: 0;
     }
 
@@ -691,24 +927,37 @@ footer a {
         margin: 0;
     }
 
+    .tile > * {
+        margin: 0;
+    }
+
 
     footer .content {
         display: grid;
+        grid-template-columns: 1fr 1fr;
+
     }
+    
     footer .content>* {
         min-width: auto;
     }
 }
 
 @media screen and (max-width: 700px) and (orientation: portrait) {
-
-    main {
-        min-height: unset;
-    }
-        
-    h4,
-    button,
+            
+    .grid p,
+    .grid a button,
     .grid section {display: none;}
+
+    .grid .content button {display: flex;}
+
+    .tile1 .content {
+        flex-direction: column !important;
+    }
+    
+    .tile1 button {
+        display: block;
+    }
 
     .tile {
         justify-content: center;
@@ -732,6 +981,9 @@ footer a {
     h2 {
         font-size: 1.2rem;
     }
+    .grid .tile1 h2 {
+        font-size: 2.2rem;
+    }
     h3 {
         font-size: 1.2rem;
     }
@@ -746,6 +998,11 @@ footer a {
     body>section {
         justify-content: flex-end;
     }
+
+    a.close {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }    
     .content .item,
     .content .item:nth-child(2) {
         padding-top: 0;
@@ -765,6 +1022,8 @@ footer a {
         display: flex;
     }
     .grid {
+        min-height: unset;
+        height: 100%;
         grid-template-columns: 50% 50%;
         grid-template-rows: 70% 15% 15%;
     }
@@ -775,9 +1034,33 @@ footer a {
     .tile5 {
         grid-column: span 1;
     }
-}
+    
+    .tile:nth-child(1n+4) {
+        justify-content: center;
+        padding: 0 1rem;
+    }
+    
+    footer,
+    footer.regular {
+        height: auto;
+    }
 
-@media screen and (max-width: 500px) and (max-height: 5000px) {}
+    footer .content {
+        margin: 0 1rem;
+        padding: 2rem 0rem;
+    }
+    
+    footer .content > * {
+        padding: 0.7rem 0.2rem;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: auto !important;
+        margin: auto !important;
+    }
+
+}
 
 @media screen and (max-width: 500px) and (max-height: 900px) {}
 

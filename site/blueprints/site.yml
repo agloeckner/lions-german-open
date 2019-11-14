@@ -36,4 +36,5 @@ columns:
           - about
           - home
           - default
-          - album 
+          - album
+          - album-partner

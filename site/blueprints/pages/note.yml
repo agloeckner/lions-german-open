@@ -28,6 +28,9 @@ columns:
   - width: 2/3
     # This columns only has a single field
     fields:
+#       editor:
+#         type: editor
+#         size: large
       text:
         type: textarea
         size: large

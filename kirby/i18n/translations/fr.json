@@ -138,6 +138,7 @@
   "error.section.notLoaded": "La section «&nbsp;{name}&nbsp;» n’a pu être chargée",
   "error.section.type.invalid": "Le type de section «&nbsp;{type}&nbsp;» est incorrect",
 
+  "error.site.changeTitle.empty": "Le titre ne peut être vide",
   "error.site.changeTitle.permission":
     "Vous n’êtes pas autorisé à modifier le titre du site",
   "error.site.update.permission": "Vous n’êtes pas autorisé à modifier le contenu global du site",
@@ -295,6 +296,7 @@
   "loading": "Chargement",
 
   "lock.unsaved": "Modifications non enregistrées",
+  "lock.unsaved.empty": "Il n’y a plus de modifications non enregistrées",
   "lock.isLocked": "Modifications non enregistrées par <strong>{email}</strong>",
   "lock.file.isLocked": "Le fichier est actuellement édité par {email} et ne peut être modifié.",
   "lock.page.isLocked": "La page est actuellement éditée par {email} et ne peut être modifiée.",

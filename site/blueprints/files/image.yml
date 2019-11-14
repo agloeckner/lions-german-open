@@ -41,3 +41,4 @@ columns:
           link:
             label: Link
             type: url
+            required: yes
