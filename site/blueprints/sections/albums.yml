@@ -10,6 +10,8 @@ info: "{{ page.images.count }} image(s)"
 #layout: cards
 template: album
 empty: No albums yet
+# sortBy: filename
+# sortable: false
 image:
   query: page.cover
   cover: true
