@@ -34,14 +34,14 @@
 
                     <div class="swiper-wrapper">
 
-                        <?php foreach($item->images() as $image): ?>
+                        <?php foreach($item->images()->sortBy('sort') as $image): ?>
 
 						<div class="swiper-slide">
 	
 			                <?php if($image->orientation() == 'portrait'): ?>
-			                <img data-src="<?= $image->resize(800)->url() ?>" class="swiper-lazy swiper-slide-img-1" style="object-fit: contain;" alt="">
+			                <img data-src="<?= $image->resize(800,1024)->url() ?>" class="swiper-lazy swiper-slide-img-1" style="object-fit: contain;" alt="">
 			                <?php else: ?>
-			                <img data-src="<?= $image->resize(1024)->url() ?>" class="swiper-lazy" alt="">
+			                <img data-src="<?= $image->resize(1024,800)->url() ?>" class="swiper-lazy" alt="">
 			                <?php endif ?>
 			                
 			                <div class="swiper-lazy-preloader"></div>
