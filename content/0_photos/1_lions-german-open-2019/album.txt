@@ -6,15 +6,7 @@ Cover:
 
 ----
 
-Headline: 
-
-----
-
 Description: 
-
-----
-
-Video: 
 
 ----
 
@@ -22,4 +14,4 @@ Tags:
 
 ----
 
-Date: 2019-10-16
+Date: 2019-11-16
