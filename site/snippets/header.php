@@ -9,7 +9,7 @@
 
   <title><?= $site->title() ?> | <?= $page->title() ?></title>
   
-  <?= css(['assets/css/index.css?v1.1']) ?>
+  <?= css(['assets/css/index.css?v1.2']) ?>
   <?= css(['assets/css/fonts.css']) ?>
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
