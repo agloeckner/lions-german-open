@@ -21,12 +21,12 @@ options:
 # Columns are optional but help structure the form layout
 # More about columns: https://getkirby.com/docs/guide/blueprints/layout#defining-columns
 columns:
-  - width: 1/2
+  # - width: 1/2
     fields:
       text:
         label: Text
         type: textarea
-        size: huge
+        # size: huge
 
   # - width: 1/2
   #   # Kirby has many different field types, from simple text fields to the more complex structure field that contains subfields
